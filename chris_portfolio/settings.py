@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-az4izn6gxi%c@j11*xp#!mu9+!%t-bt6scd%$%@l91#q_-=qa6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['portfolio-v0aq.onrender.com']
 
 
 # Application definition
@@ -117,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR, 'chris_portfolio/static')
     

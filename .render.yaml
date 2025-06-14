@@ -1,6 +1,10 @@
 services:
   - type: web
     name: chris_portfolio
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 6b92129527bab344b10382d166a7295534d4008e
     env: python
     buildCommand: "poetry install"
     startCommand: "poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000"
