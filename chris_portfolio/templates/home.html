@@ -5,193 +5,317 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <title>portf </title>
     <link rel="icon" type="image/x-icon" href="static/Images/seo.png">
     <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    
+
     <title>Christopher Mushabati - Portfolio</title>
+
+    
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.jpeg' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
-</head>
-<body>
-
-<!-- Navbar Section -->
-<nav id="navbar" class="flex s-around bg-color">
-    <div class="left-nav">
-        <h2 class="t-white">Portfolio</h2>
-    </div>
-    <div class="right-nav">
-        <ul class="flex">
-            <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
-            <li><a href="#projects" class="t-white roboto">Projects <i class="fas fa-project-diagram"></i></a></li>
-            <li><a href="#contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+  </head>
+  <body class="bg-dark text-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+      <a class="navbar-brand" href="#">Portfolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<!-- Home Section -->
-<section id="home" class="flex s-around sw-80 m-auto">
-    <div class="home-left flex items-center">
-        <div class="home-content">
-            <h6 class="poppinss">Hi, I'm</h6>
-            <h1 class="t-white">Christopher Mushabati</h1>
-            <h4 class="poppinss">Software Engineer</h4>
-            <a href="{% static 'pdf/django.pdf' %}">
-                <button class="btn poppins">Resume</button>
-            </a>
-            <a class="btn live poppins" href="mailto:your-email@example.com">Let's Talk</a>
-        </div>
-    </div>
-    <div class="home-right flex s-center items-center">
-        <div class="circle flex s-center items-center" id="mainImage">
-            <img src="{% static 'images/pic.png' %}" alt="Profile picture of Christopher Mushabati">
-        </div>
-    </div>
-</section>
+    <!-- Home -->
+    <section
+      id="home"
+      class="container py-5 d-flex flex-column flex-lg-row align-items-center justify-content-between"
+    >
+      <div class="mb-4 mb-lg-0">
+        <h6>Hi, I'm</h6>
+        <h1 class="text-white">Christopher Mushabati</h1>
+        <h4>Software Engineer</h4>
+        <a
+          href="{% static 'pdf/django.pdf' %}"
+          class="btn btn-primary me-2 mt-2"
+          >Resume</a
+        >
+        <a href="https://wa.me/260762759169" class="btn btn-success mt-2"
+          >Let's Talk</a
+        >
+      </div>
+      <div class="d-none d-lg-block">
+        <img
+          src="{% static 'images/pic.png' %}"
+          class="img-fluid rounded-circle"
+          alt="Profile picture"
+        />
+      </div>
+    </section>
 
-<!-- About Section -->
-<section id="about">
-    <h1 class="t-center my-2 t-white f-2">About Me</h1>
-    <div class="about-container flex s-around">
-        <div class="about-left flex s-center items-center">
-            <img src="{% static 'images/dog.png' %}" alt="Secondary profile illustration" style="width: 60%;">
+    <!-- About -->
+    <section id="about" class="container py-5">
+      <h2 class="text-center mb-4">About Me</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center">
+          <img
+            src="{% static 'images/dog.png' %}"
+            class="img-fluid"
+            alt="Illustration"
+          />
         </div>
-        <div class="about-right flex">
-            <div class="about-content">
-                <h1 class="t-white m-b-1 poppins">Christopher Mushabati</h1>
-                <p class="t-white poppins">
-                    I’m a B.Sc. Software Engineering student at Zambian Centre for Accountancy Studies (ZCAS). 
-                    As a fresher, I'm passionate about crafting quality software that meets users' needs. 
-                    I enjoy learning new technologies and improving my skills daily. My favorite part of software development is the actual coding and creation process.
-                </p>
-                <a class="btn" href="mailto:your-email@example.com">Hire Me</a>
+        <div class="col-lg-6">
+          <h3>Christopher Mushabati</h3>
+          <p>
+            I’m a B.Sc. Software Engineering student at ZCAS. I'm passionate
+            about building quality software that meets user needs. I enjoy
+            learning new technologies and improving daily.
+          </p>
+          <a href="https://mushabati6jr@gmail.com" class="btn btn-outline-light"
+            >Hire Me</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="container py-5">
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="row">
+        <div class="col-lg-6 text-center">
+          <img
+            src="{% static 'images/pro.png' %}"
+            class="img-fluid"
+            alt="Skills image"
+          />
+        </div>
+        <div class="col-lg-6">
+          <div class="mb-3">
+            <label class="form-label">Python</label>
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%">70%</div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills">
-    <h1 class="t-center my-2 t-white f-2">Skills</h1>
-    <div class="services-container flex s-around h-50">
-        <div class="skills-left flex s-center items-center">
-            <img src="{% static 'images/pro.png' %}" alt="Skills illustration">
-        </div>
-        <div class="skills-right flex items-center">
-            <div class="skillss-container">
-                <div class="java bar p-relative"><span class="bar-content left t-white">Core Java</span><span class="bar-content right-skills t-white">90%</span></div>
-                <div class="html bar p-relative"><span class="bar-content left t-white">HTML</span><span class="bar-content right-skills t-white">90%</span></div>
-                <div class="css bar p-relative"><span class="bar-content left t-white">CSS</span><span class="bar-content right-skills t-white">80%</span></div>
-                <div class="js bar p-relative"><span class="bar-content left t-white">JavaScript</span><span class="bar-content right-skills t-white">60%</span></div>
-                <div class="python bar p-relative"><span class="bar-content left t-white">Python</span><span class="bar-content right-skills t-white">50%</span></div>
-                <div class="mysql bar p-relative"><span class="bar-content left t-white">MySQL</span><span class="bar-content right-skills t-white">40%</span></div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">HTML</label>
+            <div class="progress">
+              <div class="progress-bar bg-success" style="width: 90%">90%</div>
             </div>
-        </div>
-    </div>
-</section>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">CSS</label>
+            <div class="progress">
+              <div class="progress-bar bg-info" style="width: 80%">80%</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">MySQL</label>
+            <div class="progress">
+              <div class="progress-bar bg-secondary" style="width: 60%">
+                60%
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">JavaScript</label>
+            <div class="progress">
+              <div class="progress-bar bg-warning" style="width: 50%">50%</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Java</label>
+            <div class="progress">
+              <div class="progress-bar bg-danger" style="width: 40%">40%</div>
+            </div>
+          </div>
 
-<!-- Projects Section -->
-<section id="projects">
-    <h1 class="t-center my-2 t-white f-2">Projects</h1>
-    <div class="projects-container flex s-center">
-        <div class="projects-item flex f-col s-center items-center">
-            <h1 class="t-white poppins">Amazon Clone</h1>
-            <p class="t-white poppins">
-                A fully functional e-commerce clone using React, Firebase for authentication and Firestore for data storage, and Stripe for payments.
+          <div class="mb-3">
+            <label class="form-label">PHP</label>
+            <div class="progress">
+              <div class="progress-bar bg-danger" style="width: 30%">30%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container py-5">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="p-4 border rounded text-white bg-dark">
+            <h3>Task Management App</h3>
+            <img 
+            src="{% static 'images/taskapp.png' %}" 
+              alt="Task Management App Screenshot" 
+              class="img-fluid rounded mb-3"
+            />
+            <p>
+              A Task Management App helps users organize and prioritize tasks, 
+              set deadlines, and track progress.
+               With reminders and collaboration features,
+               it boosts productivity and keeps projects on track.
             </p>
-            <div class="buttons flex s-around">
-                <a href="https://github.com/yourusername/amazon-clone" target="_blank" class="btn mx-1 m-top">GitHub</a>
-                <a href="https://your-live-clone-link.com" target="_blank" class="btn m-top live">Live Link</a>
-            </div>
+            <a
+              href="https://github.com/chrismushaz/TASK-MANAGEMNT-APP"
+              class="btn btn-outline-light me-2"
+              >GitHub</a
+            >
+            <a
+              href="https://task-managemnt-app.onrender.com/auth/"
+              class="btn btn-success"
+              >Live Link</a
+            >
+          </div>
         </div>
-        <div class="projects-item flex f-col s-center items-center">
-            <h1 class="t-white poppins">My Portfolio</h1>
-            <p class="t-white poppins">
-                A responsive portfolio built with HTML, CSS, and JavaScript, highlighting my work and skills with a clean and minimalist design.
+        <div class="col-md-6">
+          <div class="p-4 border rounded text-white bg-dark">
+            <h3>Errands App</h3>
+            <img 
+            src="{% static 'images/errandsapp.png' %}" 
+              alt="Task Management App Screenshot" 
+              class="img-fluid rounded mb-3"
+            />
+            <p>
+              A smart errands app that helps users plan, manage, and track daily tasks efficiently
             </p>
-            <div class="buttons flex s-around">
-                <a href="https://github.com/yourusername/portfolio" target="_blank" class="btn mx-1 m-top">GitHub</a>
-                <a href="https://your-live-portfolio-link.com" target="_blank" class="btn m-top live">Live Link</a>
-            </div>
+            <a
+              href="https://github.com/chrismushaz/Errands_Web_App"
+              class="btn btn-outline-light me-2"
+              >GitHub</a
+            >
+            <a
+              href="https://task-managemnt-app.onrender.com/auth/"
+              class="btn btn-success"
+              >Live Link</a
+            >
+          </div>
         </div>
-    </div>
-</section>
+        
+     
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="m-b-1">
-    <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
-    <div class="contact-container flex s-around items-center">
-        <div class="form" id="contactForm">
-            <form method="post" action="{% url 'contact' %}">
-                {% csrf_token %}
-                <div class="form-div">
-                    <input type="text" name="name" class="poppins" placeholder="Enter Your Name" required>
-                </div>
-                <div class="form-div">
-                    <input type="email" name="email" class="poppins" placeholder="Enter Your Email" required>
-                </div>
-                <div class="form-div">
-                    <input type="tel" name="phone" class="poppins" placeholder="Enter Your Phone" required>
-                </div>
-                <div class="form-div">
-                    <textarea name="message" cols="30" rows="10" class="poppins" placeholder="Enter Message" required></textarea>
-                </div>
-                <button type="submit" class="btn poppins">Send</button>
-            </form>
+    <!-- Contact -->
+    <section id="contact" class="container py-5">
+      <h2 class="text-center mb-4">Contact Me</h2>
+
+      <form
+        method="post"
+        action="{% url 'contact' %}"
+        class="w-100 mx-auto"
+        style="max-width: 600px"
+      >
+        {% csrf_token %}
+        <div class="mb-3">
+          
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            placeholder="Your Name"
+            required
+          />
         </div>
-    </div>
-</section>
+        <div class="mb-3">
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="tel"
+            name="phone"
+            class="form-control"
+            placeholder="Your Phone"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <textarea
+            name="message"
+            class="form-control"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </section>
 
-<!-- Footer -->
-<footer id="footer">
-    <ul class="flex s-center w-80 m-auto my-2 res">
-        <li><a href="#home" class="poppinss">Home</a></li>
-        <li><a href="#about" class="poppinss">About</a></li>
-        <li><a href="#skills" class="poppinss">Skills</a></li>
-        <li><a href="#projects" class="poppinss">Projects</a></li>
-    </ul>
-    <ul class="flex s-center w-80 font-awesome">
-        <a href="https://linkedin.com/in/yourusername" target="_blank"><li><i class="fa-brands fa-linkedin-in"></i></li></a>
-        <a href="https://github.com/yourusername" target="_blank"><li><i class="fa-brands fa-github"></i></li></a>
-        <a href="https://instagram.com/yourusername" target="_blank"><li><i class="fa-brands fa-instagram"></i></li></a>
-    </ul>
-    <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">Error By Night</span></p>
-</footer>
+    <!-- Footer -->
+    <footer class="text-center py-4 border-top mt-5">
+      <ul class="list-inline mb-2">
+        <li class="list-inline-item">
+          <a href="#home" class="text-decoration-none text-light">Home</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#about" class="text-decoration-none text-light">About</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#skills" class="text-decoration-none text-light">Skills</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#projects" class="text-decoration-none text-light"
+            >Projects</a
+          >
+        </li>
+      </ul>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="#" class="text-light"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="text-light"><i class="fab fa-github"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+      <p class="mt-3">
+        &copy; All Rights Reserved -
+        <span class="text-info">RistoHub</span>
+      </p>
+    </footer>
+    <script>
+      
+      
+    </script>
 
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const formData = new FormData(this);
-        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-
-        fetch("{% url 'contact' %}", {
-            method: "POST",
-            headers: {
-                "X-CSRFToken": csrfToken,
-            },
-            body: formData,
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-            if (data.status === 'success') {
-                document.getElementById('contactForm').reset();
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Something went wrong. Please try again.');
-        });
-    });
-</script>
-
-</body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
