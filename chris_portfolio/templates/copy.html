@@ -118,29 +118,31 @@
     <!-- Home Section -->
     <section id="home" class="bg-main flex s-around sw-80 m-auto">
       <div class="home-left flex items-center">
-        <div class="home-content ms-md-4 ms-0 pe-4">
-          <h6 class="poppinss fs-5">Hi, I'm</h6>
-          <h1 class="t-white display-5 fw-bold">Christopher Mushabati</h1>
-          <h4 class="poppinss fs-5">Software Engineer</h4>
-          <a href="{% static 'pdf/Christopher_Mushabati_Resume.pdf' %}" class="btn btn-primary me-2 mt-2">Resume</a>
-          <a href="https://wa.me/260762759169" class="btn btn-success mt-2">Let's Talk</a>
+        <div class="home-content">
+          <h6 class="poppinss">Hi, I'm</h6>
+          <h1 class="t-white">Christopher Mushabati</h1>
+          <h4 class="poppinss">Software Engineer</h4>
+          <a href="{% static 'pdf/django.pdf' %}">
+            <button class="btn poppins">Resume</button>
+          </a>
+          <a class="btn live poppins" href="mailto:your-email@example.com"
+            >Let's Talk</a
+          >
         </div>
       </div>
       <div class="home-right flex s-center items-center">
         <div class="circle flex s-center items-center" id="mainImage">
           <img
-          src="{% static 'images/pic.png' %}"
-          alt="Profile picture of Christopher Mushabati"
-          class="d-none d-md-block"
-        />
-        
+            src="{% static 'images/pic.png' %}"
+            alt="Profile picture of Christopher Mushabati"
+          />
         </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="bg-main">
-      <h2 class="text-center mb-4">About Me</h2>
+      <h1 class="t-center my-2 t-white f-2">About Me</h1>
       <div class="about-container flex s-around">
         <div class="about-left flex s-center items-center">
           <img
@@ -160,7 +162,8 @@
               favorite part of software development is the actual coding and
               creation process.
             </p>
-            <a href="mailto:mushabati6jr@gmail.com" class="btn btn-outline-light">Hire Me</a>
+            <a class="btn" href="mailto:your-email@example.com">Hire Me</a>
+          </div>
         </div>
       </div>
     </section>
@@ -174,6 +177,10 @@
         </div>
         <div class="skills-right flex items-center">
           <div class="skillss-container">
+            <div class="java bar p-relative">
+              <span class="bar-content left t-white">Core Java</span
+              ><span class="bar-content right-skills t-white">90%</span>
+            </div>
             <div class="html bar p-relative">
               <span class="bar-content left t-white">HTML</span
               ><span class="bar-content right-skills t-white">90%</span>
@@ -182,29 +189,18 @@
               <span class="bar-content left t-white">CSS</span
               ><span class="bar-content right-skills t-white">80%</span>
             </div>
-            <div class="python bar p-relative">
-              <span class="bar-content left t-white">Python </span
-              ><span class="bar-content right-skills t-white">70%</span>
-            </div>
-          
-            
             <div class="js bar p-relative">
               <span class="bar-content left t-white">JavaScript</span
+              ><span class="bar-content right-skills t-white">60%</span>
+            </div>
+            <div class="python bar p-relative">
+              <span class="bar-content left t-white">Python</span
               ><span class="bar-content right-skills t-white">50%</span>
             </div>
             <div class="mysql bar p-relative">
               <span class="bar-content left t-white">MySQL</span
               ><span class="bar-content right-skills t-white">40%</span>
             </div>
-            <div class="java bar p-relative">
-              <span class="bar-content left t-white">Java</span
-              ><span class="bar-content right-skills t-white">40%</span>
-            </div>
-            <div class="php bar p-relative">
-              <span class="bar-content left t-white">PHP</span
-              ><span class="bar-content right-skills t-white">40%</span>
-            </div>
-            
           </div>
         </div>
       </div>
@@ -215,27 +211,46 @@
       <h1 class="t-center my-2 t-white f-2">Projects</h1>
       <div class="projects-container flex s-center">
         <div class="projects-item flex f-col s-center items-center">
-          <h1 class="t-white poppins">Task Management</h1>
-          <img src="{% static 'images/taskapp.png' %}" alt="Task Management App" class="img-fluid rounded mb-3" />
+          <h1 class="t-white poppins">Amazon Clone</h1>
           <p class="t-white poppins">
-            Helps users organize and prioritize tasks, set deadlines, 
-            and track progress. Boosts productivity and team collaboration.
+            A fully functional e-commerce clone using React, Firebase for
+            authentication and Firestore for data storage, and Stripe for
+            payments.
           </p>
-          
           <div class="buttons flex s-around">
-            <a href="https://github.com/chrismushaz/TASK-MANAGEMNT-APP" class="btn btn-outline-light me-2">GitHub</a>
-          <a href="https://task-managemnt-app.onrender.com/auth/" class="btn btn-success">Live Link</a>
+            <a
+              href="https://github.com/yourusername/amazon-clone"
+              target="_blank"
+              class="btn mx-1 m-top"
+              >GitHub</a
+            >
+            <a
+              href="https://your-live-clone-link.com"
+              target="_blank"
+              class="btn m-top live"
+              >Live Link</a
+            >
           </div>
         </div>
         <div class="projects-item flex f-col s-center items-center">
-          <h1 class="t-white poppins">Errands App</h1>
-          <img src="{% static 'images/errandsapp.png' %}" alt="Errands App" class="img-fluid rounded mb-3" />
+          <h1 class="t-white poppins">My Portfolio</h1>
           <p class="t-white poppins">
-            A smart errands app to help users plan, manage, and track daily tasks efficiently.
+            A responsive portfolio built with HTML, CSS, and JavaScript,
+            highlighting my work and skills with a clean and minimalist design.
           </p>
           <div class="buttons flex s-around">
-            <a href="https://github.com/chrismushaz/Errands_Web_App" class="btn btn-outline-light me-2">GitHub</a>
-          <a href="https://task-managemnt-app.onrender.com/auth/" class="btn btn-success">Live Link</a>
+            <a
+              href="https://github.com/yourusername/portfolio"
+              target="_blank"
+              class="btn mx-1 m-top"
+              >GitHub</a
+            >
+            <a
+              href="https://your-live-portfolio-link.com"
+              target="_blank"
+              class="btn m-top live"
+              >Live Link</a
+            >
           </div>
         </div>
       </div>
@@ -285,7 +300,7 @@
                 required
               ></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send</button>
+            <button type="submit" class="btn poppins">Send</button>
           </form>
         </div>
       </div>
@@ -303,16 +318,16 @@
         <a href="https://linkedin.com/in/yourusername" target="_blank"
           ><li><i class="fa-brands fa-linkedin-in"></i></li
         ></a>
-        <a href="https://github.com/chrismushaz" target="_blank"
+        <a href="https://github.com/yourusername" target="_blank"
           ><li><i class="fa-brands fa-github"></i></li
         ></a>
-        <a href="https://www.instagram.com/chris6_nate/" target="_blank"
+        <a href="https://instagram.com/yourusername" target="_blank"
           ><li><i class="fa-brands fa-instagram"></i></li
         ></a>
       </ul>
       <p class="t-center my-2 poppins">
         &copy; All Rights Reserved -
-        <span class="cpy-white poppins">RistoHub</span>
+        <span class="cpy-white poppins">Error By Night</span>
       </p>
     </footer>
 

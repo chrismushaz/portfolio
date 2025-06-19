@@ -1,9 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
 
-body {
-    background-color: #1f1f38;
-}
+  
+      /* Ensure entire screen is covered uniformly */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f; /* Dark consistent background */
+    color: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
+    
+  }
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* Remove default spacing from all sections */
+  section {
+    margin: 0;
+    padding: 40px 0;
+    background-color: #1e1e2f;
+    color: white;
+  }
+  
+  /* Remove potential white space from containers */
+  .container, .projects-container, .about-container,
+  .skills-container, .contact-container {
+    background-color: inherit;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Footer inherits same background */
+  footer {
+    background-color: #1e1e2f;
+    color: white;
+    padding: 40px 0;
+  }
+   
+      /* Remove default spacing from all sections */
+      section {
+        margin: 0;
+        padding: 40px 0;
+        background-color: #1e1e2f;
+        color: white;
+      }
+      
+      /* Remove potential white space from containers */
+      .container, .projects-container, .about-container,
+      .skills-container, .contact-container {
+        background-color: inherit;
+        margin: 0 auto;
+        width: 100%;
+      }
+      
+      /* Footer inherits same background */
+      footer {
+        background-color: #1e1e2f;
+        color: white;
+        padding: 40px 0;
+      }
+  
+  
+  /* Section styling */
+  section {
+    width: 100%;
+  }
+  
+  
 
 * {
     margin: 0px;
@@ -150,7 +217,7 @@ h4 {
     width: 100%;
 }
 .java {
-    width: 90%;
+    width: 40%;
     height: .5rem;
     background-color: #e54c21;
     margin: 1rem 0;
@@ -182,7 +249,7 @@ h4 {
 }
 
 .python {
-    width: 50%;
+    width: 70%;
     height: .5rem;
     background-color: #7952b3;
     margin: 1rem 0;
@@ -190,9 +257,16 @@ h4 {
 }
 
 .mysql {
-    width: 30%;
+    width: 60%;
     height: .5rem;
     background-color: #61dafb;
+    margin: 1rem 0;
+    border-radius: 12px;
+}
+.php {
+    width: 40%;
+    height: .5rem;
+    background-color: #61daf6;
     margin: 1rem 0;
     border-radius: 12px;
 }
@@ -450,3 +524,41 @@ ul li a:hover {
     color: #1f1f38;
     background-color: #da7fa8;
 }
+html {
+    scroll-behavior: smooth;
+  }
+  /* Optional: navbar colors to match your theme */
+  .navbar {
+    background-color: #2F3273; /* deep purple */
+  }
+  .navbar-custom .navbar-brand,
+  .navbar-custom .nav-link {
+    color: white;
+  }
+  .navbar-custom .nav-link:hover,
+  .navbar-custom .nav-link:focus {
+    color: #2F3273; /* bright green on hover */
+  }
+  /* Optional: override toggler icon color */
+  .navbar-light .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .navbar-custom{
+    width: 100vw; /* Full viewport width */
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-custom {
+    background-color: #1e1e2f;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .offset-left {
+      margin-left: 40px;
+    }
+  }
+  
