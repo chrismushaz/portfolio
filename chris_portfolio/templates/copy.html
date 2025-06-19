@@ -24,44 +24,57 @@
     />
 
     <style>
-      /* Ensure entire screen is covered uniformly */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: #1e1e2f; /* Dark consistent background */
-        color: #ffffff;
-        box-sizing: border-box;
-        width: 100%;
-      }
-
-      /* Remove default spacing from all sections */
-      section {
-        margin: 0;
-        padding: 40px 0;
-        background-color: #1e1e2f;
-        color: white;
-      }
-
-      /* Remove potential white space from containers */
-      .container,
-      .projects-container,
-      .about-container,
-      .skills-container,
-      .contact-container {
-        background-color: inherit;
-        margin: 0 auto;
-        width: 100%;
-      }
-
-      /* Footer inherits same background */
-      footer {
-        background-color: #1e1e2f;
-        color: white;
-        padding: 40px 0;
+      @media (max-width: 768px) {
+        .home-left, .home-right, .about-container, .services-container, .projects-container {
+          flex-direction: column !important;
+          text-align: center;
+          padding: 0 1rem;
+        }
+    
+        .home-content {
+          padding: 1rem 0;
+          margin-left: 0 !important;
+        }
+    
+        .home-content h1 {
+          font-size: 1.8rem;
+        }
+    
+        .home-content h6 {
+          font-size: 1rem;
+        }
+    
+        .circle img {
+          max-width: 200px;
+          height: auto;
+        }
+    
+        .buttons a {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+    
+        .skills-left, .skills-right {
+          flex-direction: column !important;
+          align-items: center;
+        }
+    
+        .projects-item {
+          margin-bottom: 3rem;
+        }
+    
+        .about-left img {
+          max-width: 100%;
+          height: auto;
+        }
+    
+        .navbar-nav {
+          text-align: center;
+        }
       }
     </style>
+    
   </head>
   <body class="bg-drk text-light">
     <!-- Navbar Section -->
