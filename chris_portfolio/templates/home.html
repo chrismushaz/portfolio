@@ -61,6 +61,17 @@
         color: white;
         padding: 40px 0;
       }
+      @media (max-width: 767.98px) {
+        #mainImage {
+          background-image: url("{% static 'images/background.jpg' %}");
+          background-size: cover;
+          background-position: center;
+        }
+      
+        #mainImage img {
+          display: none !important;
+        }
+      }
     </style>
   </head>
   <body class="bg-drk text-light">
@@ -131,7 +142,7 @@
           <img
           src="{% static 'images/pic.png' %}"
           alt="Profile picture of Christopher Mushabati"
-          class="d-none d-md-block"
+          class="d-none "
         />
         
         </div>
