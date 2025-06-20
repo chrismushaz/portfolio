@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+<div class="container mt-2  text-center">
+    <div class="alert alert-Secondary py-2 px-3" role="alert" style="font-size: 0.9rem;">
+      <strong>Message Sent!</strong><br>
+      Thank you for contacting me.<br>
+      <a href="{% url 'contact' %}" class="btn btn-sm btn-outline-primary mt-2">Back</a>
+    </div>
+  </div>
+  
+{% endblock %}
+

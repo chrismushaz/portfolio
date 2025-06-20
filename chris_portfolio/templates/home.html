@@ -255,10 +255,17 @@
     <!-- Contact Section -->
     <section id="contact" class="bg-main m-b-1">
       <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
+      {% block content %}
+      {% endblock %}
+      {% if error %}
+  <div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+     
       <div class="contact-container flex s-around items-center">
         <div class="form" id="contactForm">
           <form method="post" action="{% url 'contact' %}">
             {% csrf_token %}
+            
             <div class="form-div">
               <input
                 type="text"
